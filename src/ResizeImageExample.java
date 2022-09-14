@@ -24,7 +24,7 @@ public class ResizeImageExample {
 
         Graphics2D g2d = bufferedImageOutput.createGraphics();
         g2d.drawImage(bufferedImageInput, 0, 0, resizeWidth, resizeHeight, null);
-        g2d.dispose();
+        //g2d.dispose();
 
         String formatName = imagePathToWrite.substring(imagePathToWrite
                 .lastIndexOf(".") + 1);
