@@ -6,9 +6,15 @@ import java.io.IOException;
 
 public class ResizeImageExample {
     public static void main(String[] args) throws IOException {
-        resizeFile("C:\\Users\\Rupam Saini\\Pictures\\java.png",
-                "C:\\Users\\Rupam Saini\\Pictures\\java-resized.png",
-                500, 500);
+        for(char i = 'A'; i <= 'Z'; i++){
+            File a = new File("C:\\Users\\artem\\Desktop\\untitled6\\dataset\\Latin\\" + i);
+            File [] files = a.listFiles();
+            for(int j = 0; j < files.length; j++){
+                resizeFile( files[j].getAbsolutePath(),
+                        "C:\\Users\\artem\\Desktop\\untitled6\\dataset\\Latin 32x32\\" + i + "\\" + files[j].getName(),
+                        32, 32);
+            }
+        }
 
     }
 
